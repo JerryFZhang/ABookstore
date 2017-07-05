@@ -30,3 +30,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('Angular Book Store');
   }));
 });
+
