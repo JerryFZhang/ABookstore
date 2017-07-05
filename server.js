@@ -1,5 +1,5 @@
 const express = require('express');
-
+const engines = require('consolidate');
 // Use synchronous JavaScript call to fetch API id stored in forecast.txt.
 // You can replace the forecast.txt with your id.
 
@@ -20,9 +20,45 @@ app.use(bodyParser.urlencoded());
 // Serving all public content only from ./public
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
+
+
 // Default landing page
 app.get('/', function (req, res) {
     res.render('index');
+});
+
+app.get('/category', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/category.html"));
+});
+
+app.get('/price', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/price.html"));
+});
+
+app.get('/book', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/book.html"));
+});
+
+app.get('/book1', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/book1.html"));
+});
+
+app.get('/search', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/search.html"));
+});
+
+app.get('/checkout', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/checkout.html"));
+});
+
+app.get('/cart', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/cart.html"));
+});
+
+app.get('/cart', function (req, res) {
+    res.sendFile(path.join(__dirname + "/public/cart.html"));
 });
 
 // Custom 404 page.
