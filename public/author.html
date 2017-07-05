@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AngularBookstore</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<style>
+    #book {
+        padding: 20px;
+        margin: 10px;
+        display: inline-block;
+        float: none;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 2px 2px 25px #ccc;
+        color: #333;
+    }
+    
+    #set {
+        border-radius: 5px;
+        box-shadow: 1px 1px 15px #ccc;
+        color: #333;
+        padding: 30px;
+        margin-top: 30px
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbar"> <a class="navbar-brand" href="#">A Bookstore</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item "> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a> </li>
+                <li class="nav-item active dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+                    <div class="dropdown-menu"> <a class="dropdown-item" href="/category">Arts & Photography</a> <a class="dropdown-item" href="/category">Biographies & Memoirs</a> <a class="dropdown-item" href="/category">Business & Investing</a> <a class="dropdown-item" href="/category">Calendars</a> <a class="dropdown-item" href="/category">Children's Books</a> <a class="dropdown-item" href="/category">Christian Books & Bibles</a> <a class="dropdown-item" href="/category">Comics & Graphic Novels</a> <a class="dropdown-item" href="/category">Computers & Technology</a> <a class="dropdown-item" href="/category">Cookbooks, Food & Wine</a> <a class="dropdown-item" href="/category">Crafts, Hobbies & Home</a> <a class="dropdown-item" href="/category">Education & Reference</a> <a class="dropdown-item" href="/category">Erotica</a> <a class="dropdown-item" href="/category">French Books (Livres en français)</a> <a class="dropdown-item" href="/category">Gay & Lesbian</a> <a class="dropdown-item" href="/category">Health, Fitness & Dieting</a> <a class="dropdown-item" href="/category">History</a> <a class="dropdown-item" href="/category">Humour & Entertainment</a> <a class="dropdown-item" href="/category">Law</a> <a class="dropdown-item" href="/category">Literature & Fiction</a> <a class="dropdown-item" href="/category">Medical Books</a> <a class="dropdown-item" href="/category">Mystery, Thriller & Suspense</a> <a class="dropdown-item" href="/category">Parenting & Relationships</a> <a class="dropdown-item" href="/category">Politics & Social Sciences</a> <a class="dropdown-item" href="/category">Professional & Technical</a> <a class="dropdown-item" href="/category">Religion & Spirituality</a> <a class="dropdown-item" href="/category">Romance</a> <a class="dropdown-item" href="/category">Science & Math</a> <a class="dropdown-item" href="/category">Science Fiction & Fantasy</a> <a class="dropdown-item" href="/category">Self-Help</a> <a class="dropdown-item" href="/category">Sports & Outdoors</a> <a class="dropdown-item" href="/category">Teens</a> <a class="dropdown-item" href="/category">Textbooks</a> <a class="dropdown-item" href="/category">Travel</a>
+                        <div class="dropdown-divider"></div> <a class="dropdown-item" href="/category">All Books</a> </li>
+<li class="nav-item active"> <a class="nav-link" href="/cart">My Cart<span class="badge badge-pill badge-danger">2</span> </a> </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <a href="/author">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </a>
+            </form>
+            </div>
+    </nav>
+    <div class="container">
+        <div class="row" id="set">
+            <div class="col-8">
+                <h3>Author: Adam Greenfield</h3> </div>
+            <div class="col-4" style="float:right">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by: Popularity </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="/price">Sort by: Price: Low to High</a> <a class="dropdown-item" href="#">Sort by: Price: High to Low</a> </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr> </div>
+            <div class="col" id="book"> <span class="badge badge-warning">BEST SELLERS</span>
+                <div class="col"><img class="rounded mx-auto d-block " src="https://images-na.ssl-images-amazon.com/images/I/51HM-BSdJyL._SX330_BO1,204,203,200_.jpg " width="120px " /></div>
+                <div class=".col-6"><a href="/book "><h4><br/>The Intelligent Investor</h4></a></div>
+                <div class=".col-6">
+                    <h6><small>by
+                       <a href="/author">Adam Greenfield</a></small></h6></div>
+                <div class=".col-6">
+                    <h6><small>$21.88</small></h6> </div>
+            </div>
+            <div class="col" id="book"> <span class="badge">!</span>
+                <div class="col"><img class=" mx-auto d-block" src="/1.jpg " width="120px " /> </div>
+                <div class=".col-6"><a href="/book "><h4><br/>Radical Technologies </h4></a></div>
+                <div class=".col-6">
+                    <h6><small>by
+                       <a href="/author">Adam Greenfield</a></small></h6> </div>
+                <div class=".col-6">
+                    <h6><small>$24.95</small></h6> </div>
+            </div>
+            <div class="col" id="book"> <span class="badge">!</span>
+                <div class="col"><img class="rounded mx-auto d-block " src="https://images-na.ssl-images-amazon.com/images/I/41puRJbtwkL._SX331_BO1,204,203,200_.jpg" width="120px " /></div>
+                <div class=".col-6"><a href="/book "><h4><br/><br/>Zero to One</h4></a></div>
+                <div class=".col-6">
+                    <h6><small>by
+                       <a href="/author">Adam Greenfield</a></small></h6></div>
+                <div class=".col-6">
+                    <h6><small>$22.11</small></h6> </div>
+            </div>
+            <div class="col" id="book"> <span class="badge badge-danger">ON SALE!</span>
+                <div class="col"><img class="rounded mx-auto d-block " src="https://images-na.ssl-images-amazon.com/images/I/31gMZciIohL.jpg" width="120px " /></div>
+                <div class=".col-6"><a href="/book "><h4><br/>The One Device</h4></a></div>
+                <div class=".col-6">
+                    <h6><small>by
+                       <a href="/author">Adam Greenfield</a></small></h6></div>
+                <div class=".col-6">
+                    <h6><small><del>$34.13</del> <span style="color:#d9534f;">$12.32</span></small></h6></div>
+            </div>
+            <div class="col" id="book"> <span class="badge">!</span>
+                <div class="col"><img class=" mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/51E8AO50Y7L._SX329_BO1,204,203,200_.jpg " width="120px " /> </div>
+                <div class=".col-6"><a href="/book "><h4><br/>The Phoenix Project </h4></a></div>
+                <div class=".col-6">
+                    <h6><small>by
+                       <a href="/author">Adam Greenfield</a></small></h6> </div>
+                <div class=".col-6">
+                    <h6><small>$23.12</small></h6> </div>
+            </div>
+            <div class="col-12">
+                <hr> </div>
+        </div>
+    </div>
+</body>
+
+</html>
