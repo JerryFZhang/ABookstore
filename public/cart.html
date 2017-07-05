@@ -10,8 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> </head>
 <style>
     #book {
         padding: 20px;
@@ -46,7 +45,7 @@
     #number {
         border: 1px solid #ccc;
         border-radius: 5px;
-        width:100%;
+        width: 100%;
     }
 </style>
 
@@ -62,9 +61,7 @@
                 <li class="nav-item active"> <a class="nav-link" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart<span class="badge badge-pill badge-danger">3</span> </a> </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <a href = "/author"><button class="btn btn-outline-default my-2 my-sm-0" type="submit">Search</button></a>
-            </form>
+                <input class="form-control mr-sm-2" type="text" placeholder="Search"> <a href="/author" role="button" class="btn btn-default my-2 my-sm-0" style="background-color:#ccc;color:#555">Search</a> </form>
             </div>
     </nav>
     <div class="container">
@@ -72,32 +69,32 @@
             <div class="col-12">
                 <h3>My Cart</h3>
                 <hr> </div>
- <div class="col-2"><img id="rounded mx-auto d-block" src="/1.jpg " width="100%" /></div>
-                <div class="col-8">
-                    <h5>Radical Technologies: The Design of Everyday Life <br/><small> by
+            <div class="col-2"><img id="rounded mx-auto d-block" src="/1.jpg " width="100%" /></div>
+            <div class="col-8">
+                <h5>Radical Technologies: The Design of Everyday Life <br/><small> by
                     <a href="/author">Adam Greenfield</a> </small></h3></div>
-            <div class="col-2"><input id="number" type="number" name="value" value="1"><p> </p><button type="button" class="btn btn-danger" style="float: right">Delete</button></div>
+            <div class="col-2"><input id="number" type="number" name="value" value="1"><p> </p><button type="button" class="btn btn-danger" style="float: right"><i class="fa fa-times" aria-hidden="true"></i> Delete</button></div>
             <div class="col-12">
                 <hr> </div>
  <div class="col-2"><img id="rounded mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/517wplLjOXL._SX329_BO1,204,203,200_.jpg " width="100%" /></div>
                 <div class="col-8">
                     <h5>The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses <br/><small> by
                     <a href="/author">Eric Ries</a> </small></h3></div>
-            <div class="col-2"><input id="number" type="number" name="value" value="1"><p> </p><button type="button" class="btn btn-danger" style="float: right">Delete</button></div>
+            <div class="col-2"><input id="number" type="number" name="value" value="1"><p> </p><button type="button" class="btn btn-danger" style="float: right"><i class="fa fa-times" aria-hidden="true"></i> Delete</button></div>
             <div class="col-12">
                 <hr> </div>
  <div class="col-2"><img id="rounded mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/41puRJbtwkL._SX331_BO1,204,203,200_.jpg " width="100%" /></div>
                 <div class="col-8">
                     <h5>Zero to One: Notes on Startups, or How to Build the Future<br/><small> by
                     <a href="/author">Peter Thiel</a>, <a href="/author">Blake Masters</a> </small></h3></div>
-            <div class="col-2"><input id="number" type="number" name="value" value="1"><p> </p><button type="button" class="btn btn-danger" style="float: right">Delete</button></div>
+            <div class="col-2"><input id="number" type="number" name="value" value="1"><p> </p><button type="button" class="btn btn-danger" style="float: right"><i class="fa fa-times" aria-hidden="true"></i> Delete</button></div>
             <div class="col-12">
                 <hr> </div>
         <div class="col-8">
             </div>
             
         <div class="col-4" >
-            <a href = "/checkout"><button type="button " class="btn btn-primary" style="float: right">Proceed to Checkout</button></a></div>
+            <a href = "/checkout"><button type="button " class="btn btn-primary" style="float: right"><i class="fa fa-credit-card" aria-hidden="true"></i> Proceed to Checkout</button></a></div>
             </div>
             </div>
         </div>
